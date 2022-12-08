@@ -45,25 +45,25 @@
 
         <fieldset class="program-selection__form-group">
           <p class="program-selection__user">
-            <label class="program-selection__user-label" for="order-name">Имя:*</label>
-            <input class="program-selection__user-value" type="text"
+            <label class="program-selection__user-label" for="user-name">Имя:*</label>
+            <input class="program-selection__user-value" type="text" id="user-name"
             placeholder="Барсик">
           </p>
           <p class="program-selection__user">
-            <label class="program-selection__user-label" for="order-name">Вес (кг):*</label>
-            <input class="program-selection__user-value" type="text"
+            <label class="program-selection__user-label" for="user-weight">Вес (кг):*</label>
+            <input class="program-selection__user-value" type="number" id="user-weight"
            placeholder="7">
           </p>
           <p class="program-selection__user">
-            <label class="program-selection__user-label" for="order-name">Возраст (лет):</label>
-            <input class="program-selection__user-value" type="text"
+            <label class="program-selection__user-label" for="user-age">Возраст (лет):</label>
+            <input class="program-selection__user-value" type="number" id="user-age"
            placeholder="7">
           </p>
         </fieldset class="program-selection__form-group">
 
         <fieldset class="program-selection__form-group">
           <p class="program-selection__program-type">
-            <label class="program-selection__program-type-label" for="order-name">
+            <label class="program-selection__program-type-label">
             <input class="program-selection__program-type-value" type="checkbox" checked>
             <span class="program-selection__program-type-title">Похудение</span>
             </label>
@@ -85,13 +85,13 @@
         <fieldset class="program-selection__form-group">
           <h3 class="program-selection__contact-title">Контактные данные (владельца кота)</h3>
           <p class="program-selection__contact">
-            <label class="program-selection__contact-label" for="order-name">E-mail:*</label>
-           <input class="program-selection__contact-value" type="email"
+            <label class="program-selection__contact-label" for="user-email">E-mail:*</label>
+           <input class="program-selection__contact-value" type="email" id="user-email"
            placeholder="kuklachev@gmail.com">
           </p>
           <p class="program-selection__contact">
-            <label class="program-selection__contact-label" for="order-name">Телефон:*</label>
-           <input class="program-selection__contact-value" type="text"
+            <label class="program-selection__contact-label" for="user-number">Телефон:*</label>
+           <input class="program-selection__contact-value" type="text" id="user-number"
            placeholder="8(960) 900-60-90">
           </p>
         </fieldset>
@@ -104,32 +104,32 @@
         <fieldset class="program-selection__form-group">
           <h3 class="program-selection__additionally-title">Дополнительно</h3>
           <p class="program-selection__additionally">
-            <label class="program-selection__additionally-label" for="order-name">
+            <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox" checked>
             <span class="program-selection__additionally-title">Сахарозаменитель</span>
             </label>
           </p>
           <p class="program-selection__additionally">
-            <label class="program-selection__additionally-label" for="order-name">
+            <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox">
             <span class="program-selection__additionally-title">Питьевая вода</span>
             </label>
           </p>
           <p class="program-selection__additionally">
-            <label class="program-selection__additionally-label" for="order-name">
+            <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox">
             <span class="program-selection__additionally-title">Молоко</span>
             </label>
           </p>
           <p class="program-selection__additionally">
-            <label class="program-selection__additionally-label" for="order-name">
+            <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox">
             <span class="program-selection__additionally-title">Витамины</span>
             </label>
           </p>
         </fieldset>
 
-        <button class="program-selection__request">Отправить заявку</button>
+        <button class="program-selection__request" type="submit">Отправить заявку</button>
         <p class="program-selection__required-fields">* — Обязательные поля</p>
 
       </form>
