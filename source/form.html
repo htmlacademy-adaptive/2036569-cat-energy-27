@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма заявки</title>
+</head>
+<body>
+  <header class="main-header">
+    <a class="main-header__logo" href="#">
+      <img class="main-header__logo-image" src="../image/logo-mobile.png" alt="Логотип" width="33" height="37">
+      <img class="main-header__logo-text" src="../image/logo text.png" alt="Логотип название" width="101" height="18">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <div class="program-selection">
+      <h1 class="program-selection__title">Подбор программы</h1>
+      <p class="program-selection__description">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+      <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
+
+        <fieldset class="program-selection__form-group">
+          <p class="program-selection__user">
+            <label class="program-selection__user-label" for="user-name">Имя:*</label>
+            <input class="program-selection__user-value" type="text" id="user-name"
+            placeholder="Барсик">
+          </p>
+          <p class="program-selection__user">
+            <label class="program-selection__user-label" for="user-weight">Вес (кг):*</label>
+            <input class="program-selection__user-value" type="number" id="user-weight"
+           placeholder="7">
+          </p>
+          <p class="program-selection__user">
+            <label class="program-selection__user-label" for="user-age">Возраст (лет):</label>
+            <input class="program-selection__user-value" type="number" id="user-age"
+           placeholder="7">
+          </p>
+        </fieldset class="program-selection__form-group">
+
+        <fieldset class="program-selection__form-group">
+          <p class="program-selection__program-type">
+            <label class="program-selection__program-type-label">
+            <input class="program-selection__program-type-value" type="checkbox" checked>
+            <span class="program-selection__program-type-title">Похудение</span>
+            </label>
+          </p>
+          <p class="program-selection__program-type">
+            <label class="program-selection__program-type-label">
+            <input class="program-selection__program-type-value" type="checkbox">
+            <span class="program-selection__program-type-title">Набор массы</span>
+            </label>
+          </p>
+          <p class="program-selection__program-type">
+            <label class="program-selection__program-type-label">
+            <input class="program-selection__program-type-value" type="checkbox">
+            <span class="program-selection__program-type-title">Не знаю (нужен ваш совет)</span>
+            </label>
+          </p>
+        </fieldset>
+
+        <fieldset class="program-selection__form-group">
+          <h3 class="program-selection__contact-title">Контактные данные (владельца кота)</h3>
+          <p class="program-selection__contact">
+            <label class="program-selection__contact-label" for="user-email">E-mail:*</label>
+           <input class="program-selection__contact-value" type="email" id="user-email"
+           placeholder="kuklachev@gmail.com">
+          </p>
+          <p class="program-selection__contact">
+            <label class="program-selection__contact-label" for="user-number">Телефон:*</label>
+           <input class="program-selection__contact-value" type="text" id="user-number"
+           placeholder="8(960) 900-60-90">
+          </p>
+        </fieldset>
+
+        <fieldset class="program-selection__form-group">
+          <h3 class="program-selection__comment-title">Комментарий</h3>
+          <textarea name="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <fieldset class="program-selection__form-group">
+          <h3 class="program-selection__additionally-title">Дополнительно</h3>
+          <p class="program-selection__additionally">
+            <label class="program-selection__additionally-label">
+            <input class="program-selection__additionally-value" type="checkbox" checked>
+            <span class="program-selection__additionally-title">Сахарозаменитель</span>
+            </label>
+          </p>
+          <p class="program-selection__additionally">
+            <label class="program-selection__additionally-label">
+            <input class="program-selection__additionally-value" type="checkbox">
+            <span class="program-selection__additionally-title">Питьевая вода</span>
+            </label>
+          </p>
+          <p class="program-selection__additionally">
+            <label class="program-selection__additionally-label">
+            <input class="program-selection__additionally-value" type="checkbox">
+            <span class="program-selection__additionally-title">Молоко</span>
+            </label>
+          </p>
+          <p class="program-selection__additionally">
+            <label class="program-selection__additionally-label">
+            <input class="program-selection__additionally-value" type="checkbox">
+            <span class="program-selection__additionally-title">Витамины</span>
+            </label>
+          </p>
+        </fieldset>
+
+        <button class="program-selection__request" type="submit">Отправить заявку</button>
+        <p class="program-selection__required-fields">* — Обязательные поля</p>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer class="main-footer">
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="visually-hidden"> Контакты компании</h2>
+        <p class="contacts__cooperation">приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург</address>
+        <img class="contacts__map" src="../image/index/map.png" alt="Карта" width="320" height="362">
+      </div>
+    </section>
+    <a class="main-footer__logo" href="#">
+      <img class="main-footer__logo-image" src="../image/logo text.png" alt="Логотип" width="128" height="24">
+    </a>
+    <a class="main-footer__social" href="#">
+      <img src="../image/index/vkontakte.png" alt="Вконтакте" width="28" height="22">
+    </a>
+    <a class="main-footer__social" href="#">
+      <img src="../image/index/youtube.png" alt="Ютуб" width="28" height="22">
+    </a>
+    <a class="main-footer__social" href="#">
+      <img src="../image/index/telegram.png" alt="Телеграм" width="28" height="22">
+    </a>
+    <a class="main-footer__html-link" href="#">
+      <p class="main-footer__html-text">HTML Academy</p>
+      <img class="main-footer__html-logo" src="../image/index/html academy.png" alt="HTML Academy" width="27" height="34">
+    </a>
+  </footer>
+
+</body>
+</html>
