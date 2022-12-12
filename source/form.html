@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Форма заявки</title>
 </head>
 <body>
-  <header class="main-header">
+  <header class="main-header container">
     <a class="main-header__logo" href="#">
-      <img class="main-header__logo-image" src="../image/logo-mobile.png" alt="Логотип" width="33" height="37">
-      <img class="main-header__logo-text" src="../image/logo text.png" alt="Логотип название" width="101" height="18">
+      <img class="main-header__logo-image" src="img/logo-mobile.png" alt="Логотип" width="33" height="37">
+      <img class="main-header__logo-text" src="img/logo text.png" alt="Логотип название" width="101" height="18">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
@@ -36,7 +37,7 @@
     </nav>
   </header>
 
-  <main class="main-container">
+  <main class="main-container container">
     <div class="program-selection">
       <h1 class="program-selection__title">Подбор программы</h1>
       <p class="program-selection__description">Заполните анкету, и мы подберем
@@ -106,25 +107,25 @@
           <p class="program-selection__additionally">
             <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox" checked>
-            <span class="program-selection__additionally-title">Сахарозаменитель</span>
+            <span class="program-selection__additionally-name">Сахарозаменитель</span>
             </label>
           </p>
           <p class="program-selection__additionally">
             <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox">
-            <span class="program-selection__additionally-title">Питьевая вода</span>
+            <span class="program-selection__additionally-name">Питьевая вода</span>
             </label>
           </p>
           <p class="program-selection__additionally">
             <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox">
-            <span class="program-selection__additionally-title">Молоко</span>
+            <span class="program-selection__additionally-name">Молоко</span>
             </label>
           </p>
           <p class="program-selection__additionally">
             <label class="program-selection__additionally-label">
             <input class="program-selection__additionally-value" type="checkbox">
-            <span class="program-selection__additionally-title">Витамины</span>
+            <span class="program-selection__additionally-name">Витамины</span>
             </label>
           </p>
         </fieldset>
@@ -139,32 +140,35 @@
   </main>
 
   <footer class="main-footer">
-    <section class="contacts">
+    <section class="contacts container">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden"> Контакты компании</h2>
         <p class="contacts__cooperation">приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург</address>
-        <img class="contacts__map" src="../image/index/map.png" alt="Карта" width="320" height="362">
+        <img class="contacts__map" src="img/index/map.png" alt="Карта" width="320" height="362">
       </div>
     </section>
-    <a class="main-footer__logo" href="#">
-      <img class="main-footer__logo-image" src="../image/logo text.png" alt="Логотип" width="128" height="24">
-    </a>
-    <a class="main-footer__social" href="#">
-      <img src="../image/index/vkontakte.png" alt="Вконтакте" width="28" height="22">
-    </a>
-    <a class="main-footer__social" href="#">
-      <img src="../image/index/youtube.png" alt="Ютуб" width="28" height="22">
-    </a>
-    <a class="main-footer__social" href="#">
-      <img src="../image/index/telegram.png" alt="Телеграм" width="28" height="22">
-    </a>
-    <a class="main-footer__html-link" href="#">
-      <p class="main-footer__html-text">HTML Academy</p>
-      <img class="main-footer__html-logo" src="../image/index/html academy.png" alt="HTML Academy" width="27" height="34">
-    </a>
+    <div class="container">
+      <a class="main-footer__logo" href="#">
+        <img class="main-footer__logo-image" src="img/logo text.png" alt="Логотип" width="128" height="24">
+      </a>
+      <a class="main-footer__social" href="#">
+        <img src="img/index/vkontakte.png" alt="Вконтакте" width="28" height="22">
+      </a>
+      <a class="main-footer__social" href="#">
+        <img src="img/index/youtube.png" alt="Ютуб" width="28" height="22">
+      </a>
+      <a class="main-footer__social" href="#">
+        <img src="img/index/telegram.png" alt="Телеграм" width="28" height="22">
+      </a>
+      <a class="main-footer__html-link" href="#">
+        <p class="main-footer__html-text">HTML Academy</p>
+        <img class="main-footer__html-logo" src="img/index/html academy.png" alt="HTML Academy" width="27"
+          height="34">
+      </a>
+    </div>
   </footer>
 
 </body>
