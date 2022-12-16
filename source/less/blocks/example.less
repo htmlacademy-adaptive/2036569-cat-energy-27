@@ -4,6 +4,11 @@
   margin: auto;
 }
 
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .example__title {
   padding-top: 25px;
   font-family: "Oswald", sans-serif;
@@ -21,4 +26,41 @@
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: 708px;
+  }
+
+  .example__info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .example__image {
+    margin: auto;
+    width: 560px;
+    height: 512px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    width: 1220px;
+  }
+
+  .example__wrapper {
+    width: 1220px;
+    flex-direction: row;
+  }
+
+  .example__info {
+    flex-direction: column;
+  }
+
+  .example__image {
+    width: 560px;
+    height: 512px;
+  }
 }

@@ -19,3 +19,25 @@
   font-size: 24px;
   line-height: 24px;
 }
+
+@media (min-width: @tablet-width) {
+  .program-selection__additionally-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-selection__additionally-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .program-selection__form-block {
+    display: flex;
+  }
+
+  .program-selection__contact-block {
+    display: flex;
+  }
+}

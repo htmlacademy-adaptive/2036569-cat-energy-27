@@ -1,3 +1,4 @@
+
 .promo__wrapper {
   display: flex;
   flex-direction: column;
@@ -5,9 +6,16 @@
 }
 
 .promo__background {
+  position: absolute;
   background: url("../img/index/index-background.jpg") no-repeat;
   width: 320px;
   height: 302px;
+}
+
+.promo__text {
+  position: relative;
+  width: 320px;
+  padding-bottom: 165px;
 }
 
 .promo__title {
@@ -29,4 +37,66 @@
   line-height: 14px;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__title {
+    color: #000000;
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 60px 0 40px 0;
+  }
+
+  .promo__slogan {
+    color: #000000;
+    text-align: left;
+    padding: 0;
+  }
+
+  .promo__background {
+    background: none;
+  }
+
+  .promo__text {
+    width: 440px;
+    padding-bottom: 20px;
+  }
+
+  .promo__production {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    height: 580px;
+  }
+
+  .promo__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .promo__production {
+    width: 552px;
+    height: 499px;
+  }
+
+  .promo__title {
+    padding: 0 0 40px 0;
+  }
+
+  .promo__background {
+    background: url("../img/index/index-background-desktop.jpg") no-repeat;
+    width: 720px;
+    height: 694px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .promo__text {
+    margin-left: 100px;
+  }
 }

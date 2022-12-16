@@ -4,3 +4,48 @@
   line-height: 20px;
   text-transform: uppercase;
 }
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: auto;
+}
+
+.contacts__info {
+  display: flex;
+  margin: auto;
+}
+
+.contacts__map {
+  width: 320px;
+  height: 362px;
+  background: url("../img/index/map.png") no-repeat center;
+  background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    width: 768px;
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 400px;
+    background: url("../img/index/map-tablet.png") no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    width: 1440px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 400px;
+    background: url("../img/index/map-desktop.png") no-repeat center;
+    background-size: cover;
+  }
+}

@@ -1,3 +1,10 @@
+.additional-goods__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: auto;
+}
+
 .additional-goods__title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -24,4 +31,55 @@
   color: #ffffff;
   width: 161px;
   text-align: center;
+}
+
+.additional-goods__item {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.additional-goods__card-item {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-goods__wrapper {
+    width: 708px;
+    align-items: center;
+  }
+
+  .additional-goods__text {
+    display: flex;
+  }
+
+  .additional-goods__gift {
+    background: url("../img/catalog/background-tablet.png") no-repeat;
+    width: 707px;
+    height: 200px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-goods__wrapper {
+    width: 1220px;
+    align-items: center;
+  }
+
+  .additional-goods__block {
+    display: flex;
+  }
+
+  .additional-goods__gift {
+    background: url("../img/catalog/background.jpg") no-repeat;
+    width: 280px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .additional-goods__item {
+    flex-direction: row;
+  }
 }
