@@ -9,27 +9,147 @@
 .main-footer__list {
   display: flex;
   list-style-type: none;
+  justify-content: space-around;
+  position: relative;
   margin: 0;
   padding: 0;
+  margin-top: 54px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -25px;
+  }
+}
+
+.main-footer__items {
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__logo-image {
+  display: block;
+  margin: auto;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__html-link {
   display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  color: #444444;
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -25px;
+  }
+}
+
+.main-footer__html-logo {
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__html-text {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__item {
+  width: 280px;
+  height: 236px;
+  margin-top: 39px;
 }
 
 @media (min-width: @tablet-width) {
   .main-footer__item {
     display: flex;
     justify-content: space-between;
+    width: 708px;
+    height: 147px;
+    margin-top: 0;
   }
 
   .main-footer {
     width: 768px;
+  }
+
+  .main-footer__logo {
+    margin: auto 0;
+  }
+
+  .main-footer__html-link {
+    &::before {
+      background-color: #d9d9d900;
+    }
+  }
+
+  .main-footer__list {
+    margin: auto 0;
+
+    &::before {
+      background-color: #d9d9d900;
+    }
+  }
+
+  .main-footer__items:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  .main-footer__html-text {
+    margin-top: 10px;
+    margin-right: 23px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-footer {
     width: 1440px;
+    position: relative;
+  }
+
+  .contacts__info {
+    position: absolute;
+    width: 565px;
+    height: 198px;
+    top: 95px;
+    left: 110px;
+  }
+
+  .main-footer__item {
+    width: 1220px;
+    height: 149px;
+    margin-top: 0;
   }
 }

@@ -7,10 +7,70 @@
 .program-selection__title {
   font-size: 36px;
   line-height: 36px;
+  margin-top: 27px;
+  margin-bottom: 37px;
 }
 
 .program-selection__description {
   font-size: 14px;
+  text-transform: uppercase;
+  width: 226px;
+}
+
+.program-selection__form-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 46px;
+}
+
+.program-selection__program-type-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-selection__user {
+  margin: 0;
+}
+
+.program-selection__user:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.program-selection__user-value {
+  border: 1px solid #e7e7e7;
+  padding: 0 20px;
+  height: 43px;
+}
+
+.program-selection__user-value::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-selection__user-label {
+  text-transform: uppercase;
+  color: #444444;
+  margin-right: 13px;
+}
+
+.program-selection__form-group .program-selection__user:nth-child(1) .program-selection__user-value {
+  width: 178px;
+  height: 45px;
+}
+
+.program-selection__form-group .program-selection__user:nth-child(2) .program-selection__user-value {
+  width: 156px;
+  height: 45px;
+}
+
+.program-selection__form-group .program-selection__user:nth-child(3) .program-selection__user-value {
+  width: 123px;
+  height: 45px;
 }
 
 .program-selection__contact-title,
@@ -20,10 +80,201 @@
   line-height: 24px;
 }
 
+.program-selection__contact-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 35px;
+}
+
+.program-selection__contact-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.program-selection__contact-value {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  padding: 15px 20px;
+}
+
+.program-selection__contact-value-email {
+  width: 170px;
+}
+
+.program-selection__contact-value-phone {
+  width: 153px;
+}
+
+.program-selection__comment-title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 37px;
+}
+
+.program-selection__comment-value {
+  width: 250px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  border: 1px solid #e7e7e7;
+}
+
+.program-selection__additionally-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.program-selection__additionally-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-selection__request {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 280px;
+  height: 40px;
+  background-color: #68b738;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 21px;
+}
+
+.program-selection__required-fields {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
 @media (min-width: @tablet-width) {
+  .program-selection__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 50px;
+    margin-bottom: 54px;
+  }
+
+  .program-selection__description {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    width: 323px;
+    margin-bottom: 66px;
+  }
+
+  .program-selection__user-label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__form-group .program-selection__user:nth-child(1) .program-selection__user-value {
+    width: 602px;
+    height: 45px;
+  }
+
+  .program-selection__form-group .program-selection__user:nth-child(2) .program-selection__user-value {
+    width: 574px;
+    height: 45px;
+  }
+
+  .program-selection__form-group .program-selection__user:nth-child(3) .program-selection__user-value {
+    width: 533px;
+    height: 45px;
+  }
+
+  .program-selection__user-value::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__form-group-checkbox {
+    border: 1px solid #e7e7e7;
+    width: 680px;
+    height: 154px;
+    padding: 20px 0 20px 28px;
+  }
+
+  .program-selection__program-type {
+    margin: 0;
+  }
+
+  .program-selection__program-type:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
   .program-selection__additionally-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .program-selection__contact-value-email {
+    width: 602px;
+  }
+
+  .program-selection__contact-value-phone {
+    width: 585px;
+  }
+
+  .program-selection__contact-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program-selection__comment-title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+  }
+
+  .program-selection__comment-value {
+    width: 660px;
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__additionally-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program-selection__additionally-name {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__request {
+    font-size: 20px;
+    line-height: 0px;
+    width: 282px;
+    height: 52px;
+  }
+
+  .program-selection__required-fields {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 74px;
+  }
+
+  .program-selection__request-block {
+    display: flex;
   }
 }
 
@@ -33,11 +284,68 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .program-selection__form-group {
+    width: 1220px;
+  }
+
   .program-selection__form-block {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .program-selection__form-group .program-selection__user:nth-child(1) .program-selection__user-value {
+    width: 464px;
+    height: 45px;
+  }
+
+  .program-selection__form-group .program-selection__user:nth-child(2) .program-selection__user-value {
+    width: 436px;
+    height: 45px;
+  }
+
+  .program-selection__form-group .program-selection__user:nth-child(3) .program-selection__user-value {
+    width: 395px;
+    height: 45px;
+  }
+
+  .program-selection__form-group-checkbox {
+    width: 540px;
+  }
+
+  .program-selection__form-group-user {
+    width: 570px;
+  }
+
+  .program-selection__user:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .program-selection__user-value {
+    height: 50px;
+  }
+
+  .program-selection__contact {
+    width: 570px;
+  }
+
+  .program-selection__contact-value-email {
+    width: 464px;
+  }
+
+  .program-selection__contact-value-phone {
+    width: 447px;
   }
 
   .program-selection__contact-block {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .program-selection__comment-value {
+    width: 1178px;
+  }
+
+  .program-selection__required-fields {
+    margin-left: 84px;
   }
 }

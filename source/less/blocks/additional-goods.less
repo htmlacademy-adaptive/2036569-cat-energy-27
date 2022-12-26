@@ -1,7 +1,11 @@
+.additional-goods {
+  width: 280px;
+}
+
 .additional-goods__wrapper {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 280px;
   margin: auto;
 }
 
@@ -9,12 +13,34 @@
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 24px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -25px;
+    right: -20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 2px;
+    background-color: #68b738;
+    right: -10px;
+    top: 15px;
+  }
 }
 
 .additional-goods__card-title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
 }
 
 .additional-goods__gift {
@@ -25,6 +51,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 54px;
+  position: relative;
+  margin-bottom: 35px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -25px;
+    right: -20px;
+  }
 }
 
 .additional-goods__gift-text {
@@ -37,13 +76,71 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  margin-bottom: 31px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: 0;
+    right: -20px;
+  }
 }
 
 .additional-goods__card-item {
   display: flex;
+  justify-content: space-between;
 }
 
+.additional-goods__list {
+  padding: 0;
+  margin: 0;
+}
+
+.additional-goods__order {
+  width: 280px;
+  height: 40px;
+  background-color: #68b738;
+  color: #ffffff;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+
 @media (min-width: @tablet-width) {
+  .additional-goods__title {
+    width: 708px;
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 37px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 53px;
+      height: 2px;
+      background-color: #68b738;
+      left: -100px;
+      top: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 328px;
+      height: 2px;
+      background-color: #68b738;
+      right: -10px;
+      top: 20px;
+    }
+  }
+
   .additional-goods__wrapper {
     width: 708px;
     align-items: center;
@@ -51,6 +148,9 @@
 
   .additional-goods__text {
     display: flex;
+    justify-content: space-between;
+    width: 632px;
+    margin: 0 auto;
   }
 
   .additional-goods__gift {
@@ -58,6 +158,38 @@
     width: 707px;
     height: 200px;
     flex-direction: row;
+    margin-bottom: 76px;
+
+    &::after {
+      background-color: #d9d9d900;
+    }
+  }
+
+  .additional-goods__item {
+    width: 708px;
+    height: 139px;
+    border: 1px solid #cdcdcd;
+    margin-bottom: 0;
+
+    &::after {
+      background-color: #d9d9d900;
+    }
+  }
+
+  .additional-goods__card-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-goods__card-description,
+  .additional-goods__card-price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-goods__order {
+    width: 632px;
+    margin: 0 auto;
   }
 }
 
@@ -73,13 +205,52 @@
 
   .additional-goods__gift {
     background: url("../img/catalog/background.jpg") no-repeat;
-    width: 280px;
-    height: 290px;
+    width: 249px;
+    height: 289px;
     display: flex;
     flex-direction: column;
+    margin-top: -10px;
+    margin-left: 80px;
   }
 
   .additional-goods__item {
     flex-direction: row;
+    width: 895px;
+    height: 72px;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 895px;
+      height: 1px;
+      background-color: #cdcdcd;
+      top: -5px;
+    }
+  }
+
+  .additional-goods__title {
+    width: 1220px;
+    margin-left: 0;
+    margin-bottom: 80px;
+
+    &::before {
+      width: 957px;
+      right: -140px;
+    }
+  }
+
+  .additional-goods__order {
+    width: 244px;
+    margin: auto;
+  }
+
+  .additional-goods__card-item {
+    width: 285px;
+    justify-content: space-between;
+  }
+
+  .additional-goods__text {
+    margin-right: 40px;
   }
 }

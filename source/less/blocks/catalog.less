@@ -2,6 +2,26 @@
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
+  margin-top: 30px;
+  width: 260px;
+  margin-bottom: 70px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -25px;
+    right: -40px;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
 }
 
 .catalog__item {
@@ -11,13 +31,28 @@
   margin-top: 20px;
   padding: 0;
   list-style-type: none;
+  width: 280px;
+  margin-bottom: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -20px;
+    right: -20px;
+  }
 }
 
-.catalog__title-card,
-.catalog__show-product {
+.catalog__title-card {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  width: 76px;
 }
 
 .catalog__info-description,
@@ -27,7 +62,7 @@
 }
 
 .main-container {
-  width: 320px;
+  width: 280px;
   margin: auto;
 }
 
@@ -35,14 +70,174 @@
   display: flex;
 }
 
+.catalog__even {
+  margin-left: 28px;
+}
+
+.catalog__odd {
+  margin-left: 36px;
+}
+
+.catalog__image-odd {
+  margin-left: 36px;
+}
+
+.catalog__image-even {
+  margin-left: 26px;
+}
+
+.catalog__image {
+  margin-top: 20px;
+}
+
+.catalog__info-item {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.catalog__order {
+  margin-top: 22px;
+  width: 280px;
+  height: 40px;
+  background-color: #68b738;
+  color: #ffffff;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.catalog__button-show {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+    left: 5px;
+    top: 18px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+    left: 5px;
+    top: 18px;
+    transform: rotate(-90deg);
+  }
+}
+
+.catalog__show-product,
+.catalog__many-flavors {
+  text-align: center;
+}
+
+.catalog__show-product {
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 8px;
+}
+
+.catalog__many-flavors {
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.catalog__show-all {
+  width: 280px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.catalog__500-chicken {
+  background: url("../img/catalog/catalog-pro-500-chicken.png");
+  width: 68px;
+  height: 86px;
+}
+
+.catalog__1000-chicken {
+  background: url("../img/catalog/catalog-pro-1000-chicken.png");
+  width: 84px;
+  height: 100px;
+}
+
+.catalog__500-fish {
+  background: url("../img/catalog/catalog-pro-500-fish.png");
+  width: 68px;
+  height: 78px;
+}
+
+.catalog__1000-fish {
+  background: url("../img/catalog/catalog-pro-1000-fish.png");
+  width: 84px;
+  height: 100px;
+}
+
+.catalog__500-buckwheat {
+  background: url("../img/catalog/catalog-slim-500-buckwheat.png");
+  width: 68px;
+  height: 78px;
+}
+
+.catalog__1000-buckwheat {
+  background: url("../img/catalog/catalog-slim-1000-buckwheat.png");
+  width: 84px;
+  height: 100px;
+}
+
+.catalog__500-rice {
+  background: url("../img/catalog/catalog-slim-500-rice.png");
+  width: 68px;
+  height: 78px;
+}
 
 @media (min-width: @tablet-width) {
+  .catalog__title {
+    font-size: 60px;
+    line-height: 60px;
+    width: 440px;
+    margin-bottom: 150px;
+
+    &::after {
+      background-color: #d9d9d900;
+    }
+  }
+
   .main-container {
-    width: 768px;
+    width: 708px;
   }
 
   .main-nav__link-catalog {
     color: #000000;
+  }
+
+  .catalog__item {
+    width: 324px;
+    height: 430px;
+    background-color: #f2f2f2;
+
+    &::after,
+    &::before {
+      background-color: #d9d9d900;
+    }
   }
 
   .catalog__list {
@@ -50,16 +245,204 @@
     grid-template-columns: 324px 324px;
     gap: 95px 60px;
   }
+
+  .catalog__image {
+    margin-top: 0;
+    margin-bottom: 34px;
+  }
+
+  .catalog__image-odd {
+    margin-left: 0;
+    position: absolute;
+    top: -45px;
+  }
+
+  .catalog__image-even {
+    margin-left: 0;
+    position: absolute;
+    top: -75px;
+  }
+
+  .catalog__odd {
+    margin-left: 0;
+  }
+
+  .catalog__text {
+    margin-top: 160px;
+  }
+
+  .catalog__even {
+    margin-left: 0;
+  }
+
+  .catalog__title-card {
+    width: 147px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .catalog__info-description,
+  .catalog__info-value {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .catalog__info-item {
+    width: 246px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 1px;
+      background-color: #cdcdcd;
+      top: 25px;
+    }
+  }
+
+  .catalog__block {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .catalog__order {
+    width: 246px;
+    margin: auto;
+  }
+
+  .catalog__button-show {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    margin-top: 52px;
+    margin-bottom: 49px;
+
+    &::before {
+      width: 60px;
+      top: 30px;
+      left: 0;
+    }
+
+    &::after {
+      width: 60px;
+      top: 30px;
+      left: 0;
+    }
+  }
+
+  .catalog__show-product {
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 22px;
+    width: 175px;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+  }
+
+  .catalog__many-flavors {
+    font-size: 16px;
+    line-height: 18px;
+    width: 165px;
+    margin: 0 auto;
+  }
+
+  .catalog__show-all {
+    position: absolute;
+    left: 23px;
+    bottom: 35px;
+  }
+
+  .catalog__block-show-all {
+    background-color: #ffffff;
+    border: 2px solid #f2f2f2;
+  }
+
+  .catalog__500-chicken {
+    background: url("../img/catalog/catalog-pro-500-chicken-tablet.png");
+    width: 161px;
+    height: 172px;
+  }
+
+  .catalog__1000-chicken {
+    background: url("../img/catalog/catalog-pro-1000-chicken-tablet.png");
+    width: 168px;
+    height: 200px;
+  }
+
+  .catalog__500-fish {
+    background: url("../img/catalog/catalog-pro-500-fish-tablet.png");
+    width: 163px;
+    height: 174px;
+  }
+
+  .catalog__1000-fish {
+    background: url("../img/catalog/catalog-pro-1000-fish-tablet.png");
+    width: 168px;
+    height: 200px;
+  }
+
+  .catalog__500-buckwheat {
+    background: url("../img/catalog/catalog-slim-500-buckwheat-tablet.png");
+    width: 161px;
+    height: 171px;
+  }
+
+  .catalog__1000-buckwheat {
+    background: url("../img/catalog/catalog-slim-1000-buckwheat-tablet.png");
+    width: 168px;
+    height: 200px;
+  }
+
+  .catalog__500-rice {
+    background: url("../img/catalog/catalog-slim-500-rice-tablet.png");
+    width: 163px;
+    height: 174px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__item {
+    width: 245px;
+  }
+
+  .catalog__text {
+    width: 168px;
+  }
+
+  .catalog__info-item {
+    width: 168px;
+
+    &::before {
+      width: 169px;
+      background-color: #cdcdcd;
+    }
+  }
+
+  .catalog__order {
+    width: 168px;
+  }
+
+  .catalog__show-all {
+    width: 169px;
+    left: 40px;
+  }
+
   .main-container {
-    width: 1440px;
+    width: 1220px;
   }
 
   .catalog__list {
     display: grid;
     grid-template-columns: 245px 245px 245px 245px;
     gap: 95px 80px;
+  }
+
+  .contacts__info-catalog {
+    background-color: #ffffff;
   }
 }
