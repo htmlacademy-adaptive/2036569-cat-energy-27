@@ -107,6 +107,15 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active span {
+    opacity: 0.6;
+  }
 }
 
 .catalog__button-show {
@@ -165,6 +174,15 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #444444;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active span {
+    opacity: 0.6;
+  }
 }
 
 .catalog__500-chicken {
@@ -207,6 +225,11 @@
   background: url("../img/catalog/catalog-slim-500-rice.png");
   width: 68px;
   height: 78px;
+}
+
+.catalog__title-card-link {
+  text-decoration: none;
+  color: #000000;
 }
 
 @media (min-width: @tablet-width) {

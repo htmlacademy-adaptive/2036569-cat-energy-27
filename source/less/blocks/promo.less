@@ -1,4 +1,3 @@
-
 .promo__wrapper {
   display: flex;
   flex-direction: column;
@@ -8,11 +7,15 @@
   margin: auto;
 }
 
-.promo__background {
+.promo__background-mobile {
   position: absolute;
   background: url("../img/index/index-background.jpg") no-repeat;
   width: 320px;
   height: 302px;
+}
+
+.promo__background {
+  display: none;
 }
 
 .promo__text {
@@ -92,6 +95,10 @@
     background: none;
   }
 
+  .promo__background-mobile {
+    display: none;
+  }
+
   .promo__text {
     width: 440px;
     padding-bottom: 20px;
@@ -137,11 +144,30 @@
   }
 
   .promo__background {
-    background: url("../img/index/index-background-desktop.jpg") no-repeat;
+    display: block;
+    position: absolute;
+    background-image: url("../img/index/index-background-desktop.jpg");
     width: 720px;
     height: 694px;
+    top: -2px;
     right: 0;
     z-index: -1;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 694px;
+      width: 300px;
+      background-color: #5eaa2f;
+      top: 0;
+      z-index: -3;
+      left: -220px;
+    }
+  }
+
+  .promo__background-mobile {
+    display: none;
   }
 
   .promo__text {
