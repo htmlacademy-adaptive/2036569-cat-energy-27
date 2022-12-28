@@ -1,15 +1,21 @@
-
 .promo__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  width: 280px;
+  margin: auto;
 }
 
-.promo__background {
+.promo__background-mobile {
   position: absolute;
   background: url("../img/index/index-background.jpg") no-repeat;
   width: 320px;
   height: 302px;
+}
+
+.promo__background {
+  display: none;
 }
 
 .promo__text {
@@ -39,7 +45,38 @@
   text-transform: uppercase;
 }
 
+.promo__production {
+  position: absolute;
+  top: 160px;
+}
+
+.promo__button {
+  margin-top: 150px;
+  width: 280px;
+  height: 40px;
+  border: none;
+  background: #68b738;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active .promo__button-text {
+    opacity: 0.6;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .promo__wrapper {
+    width: 708px;
+  }
+
   .promo__title {
     color: #000000;
     text-align: left;
@@ -58,14 +95,30 @@
     background: none;
   }
 
+  .promo__background-mobile {
+    display: none;
+  }
+
   .promo__text {
     width: 440px;
     padding-bottom: 20px;
   }
 
   .promo__production {
+    position: static;
     width: 709px;
     height: 609px;
+  }
+
+  .promo__button {
+    position: absolute;
+    top: 285px;
+    left: 65px;
+    margin-top: 0;
+    width: 244px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
@@ -77,6 +130,8 @@
   .promo__wrapper {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+    width: 1440px;
   }
 
   .promo__production {
@@ -89,14 +144,40 @@
   }
 
   .promo__background {
-    background: url("../img/index/index-background-desktop.jpg") no-repeat;
+    display: block;
+    position: absolute;
+    background-image: url("../img/index/index-background-desktop.jpg");
     width: 720px;
     height: 694px;
+    top: -2px;
     right: 0;
     z-index: -1;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 694px;
+      width: 300px;
+      background-color: #5eaa2f;
+      top: 0;
+      z-index: -3;
+      left: -220px;
+    }
+  }
+
+  .promo__background-mobile {
+    display: none;
   }
 
   .promo__text {
     margin-left: 100px;
+  }
+
+  .promo__button {
+    position: absolute;
+    top: 360px;
+    left: 100px;
+    margin-top: 0;
   }
 }

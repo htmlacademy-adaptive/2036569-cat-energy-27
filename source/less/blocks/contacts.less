@@ -3,18 +3,34 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin-left: 20px;
+  width: 139px;
+}
+
+.contacts__address {
+  width: 139px;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
   width: 320px;
-  margin: auto;
 }
 
 .contacts__info {
   display: flex;
   margin: auto;
+  background-color: #ffffff;
+  align-items: center;
+  width: 320px;
+}
+
+.contacts__info-catalog {
+  background-color: #f2f2f2;
 }
 
 .contacts__map {
@@ -27,6 +43,23 @@
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
     width: 768px;
+  }
+
+  .contacts__info {
+    width: 768px;
+    height: 199px;
+    justify-content: space-around;
+  }
+
+  .contacts__cooperation {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .contacts__address {
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
   }
 
   .contacts__map {
