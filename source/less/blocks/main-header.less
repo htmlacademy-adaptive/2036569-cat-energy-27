@@ -7,6 +7,14 @@
 
 .main-header__logo {
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__logo-image {
@@ -111,7 +119,6 @@
   text-align: center;
   padding: 22px 22px 24px 22px;
   text-transform: uppercase;
-  // background-color: #ffffff;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -162,6 +169,10 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  .main-header__logo-text {
+    display: none;
   }
 
   .main-nav__wrapper {
