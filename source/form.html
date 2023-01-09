@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="fav.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <title>Форма заявки</title>
 </head>
@@ -13,7 +17,11 @@
   <header class="main-header container main-container">
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="img/logo-mobile.png" alt="Логотип" width="33" height="37">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.png" width="202" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.png" width="174" height="51">
+          <img class="main-header__logo-image" src="img/logo-mobile.png" alt="Логотип" width="33" height="37">
+        </picture>
         <img class="main-header__logo-text" src="img/logo text.png" alt="Логотип название" width="101" height="18">
       </a>
     </div>

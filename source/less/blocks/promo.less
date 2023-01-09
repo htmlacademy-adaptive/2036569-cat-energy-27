@@ -12,6 +12,11 @@
   background: url("../img/index/index-background.jpg") no-repeat;
   width: 320px;
   height: 302px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/index-background@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .promo__background {
@@ -47,7 +52,8 @@
 
 .promo__production {
   position: absolute;
-  top: 160px;
+  top: 165px;
+  left: -5px;
 }
 
 .promo__button {
@@ -163,6 +169,11 @@
       top: 0;
       z-index: -3;
       left: -220px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
     }
   }
 
