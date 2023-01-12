@@ -109,6 +109,7 @@
   position: absolute;
   top: 17px;
   right: 17px;
+  stroke: #222222;
 }
 
 .program-selection__contact-label {
@@ -126,6 +127,10 @@
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
   padding: 15px 20px;
+
+  &:focus + .program-selection__contact-icon {
+    stroke: #68b738;
+  }
 }
 
 .program-selection__contact-value-email {
