@@ -25,10 +25,12 @@
 }
 
 .program-selection__program-type-title {
+  display: block;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 45px;
 }
 
 .program-selection__user {
@@ -98,6 +100,18 @@
   }
 }
 
+
+.program-selection__contact {
+  position: relative;
+}
+
+.program-selection__contact-icon {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  stroke: #222222;
+}
+
 .program-selection__contact-label {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -113,6 +127,10 @@
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
   padding: 15px 20px;
+
+  &:focus + .program-selection__contact-icon {
+    stroke: #68b738;
+  }
 }
 
 .program-selection__contact-value-email {
@@ -157,6 +175,8 @@
   font-size: 24px;
   line-height: 26px;
   position: relative;
+  margin: 0;
+  margin-bottom: 34px;
 
   &::before {
     content: "";
@@ -174,6 +194,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 45px;
 }
 
 .program-selection__request {
@@ -210,6 +231,67 @@
 .program-selection__comment-value {
   &:hover {
     border: 1px solid #cdcdcd;
+  }
+}
+
+.program-selection__program-type {
+  display: block;
+  margin: 0;
+  margin-top: 25px;
+}
+
+.program-selection__program-type-label {
+  position: relative;
+}
+
+.program-selection__program-type-value {
+  position: absolute;
+  top: -7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+}
+
+.program-selection__program-type-label .program-selection__program-type-value[type="checkbox"]:checked + .program-selection__program-mark::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  background-color: #68b738;
+  border-radius: 50%;
+}
+
+.program-selection__additionally {
+  margin: 0;
+  margin-top: 25px;
+}
+
+.program-selection__additionally-label {
+  position: relative;
+}
+
+.program-selection__program-additionally-value {
+  position: absolute;
+  top: -7px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+}
+
+.program-selection__additionally-label .program-selection__additionally-value[type="checkbox"]:checked + .program-selection__program-mark::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/form/icon.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/form/icon@2x.png");
   }
 }
 
@@ -263,10 +345,11 @@
 
   .program-selection__program-type {
     margin: 0;
+    margin-top: 20px;
   }
 
   .program-selection__program-type:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 30px;
   }
 
   .program-selection__additionally-block {
@@ -353,6 +436,7 @@
   .program-selection__additionally-name {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 60px;
   }
 
   .program-selection__request {
@@ -360,6 +444,7 @@
     line-height: 0px;
     width: 282px;
     height: 52px;
+    margin-bottom: 72px;
   }
 
   .program-selection__required-fields {
@@ -370,6 +455,41 @@
 
   .program-selection__request-block {
     display: flex;
+  }
+
+  .program-selection__program-type-title {
+    padding-left: 60px;
+  }
+
+  .program-selection__program-type-value {
+    top: -11px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .program-selection__program-type-label .program-selection__program-type-value[type="checkbox"]:checked + .program-selection__program-mark::before {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .program-selection__program-additionally-value {
+    width: 40px;
+    height: 40px;
+  }
+
+  .program-selection__additionally-label .program-selection__additionally-value[type="checkbox"]:checked + .program-selection__program-mark::before {
+    top: 12px;
+    left: 10px;
+    width: 24px;
+    height: 18px;
+    background-size: cover;
+    background-image: url("../img/form/icon-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/form/icon-tablet@2x.png");
+    }
   }
 }
 
@@ -463,5 +583,9 @@
 
   .program-selection__required-fields {
     margin-left: 84px;
+  }
+
+  .program-selection__request {
+    margin-bottom: 82px;
   }
 }
