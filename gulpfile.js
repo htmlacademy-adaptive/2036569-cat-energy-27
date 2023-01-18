@@ -20,6 +20,7 @@ export const styles = () => {
       autoprefixer()
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 

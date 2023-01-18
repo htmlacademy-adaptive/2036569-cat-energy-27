@@ -9,7 +9,7 @@
   flex-direction: column;
   padding-bottom: 40px;
   position: relative;
-  width: 320px;
+  width: 280px;
 }
 
 .example__title {
@@ -180,6 +180,18 @@
 
   .example {
     width: 100%;
+    background-color: #ffffff;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 462px;
+      top: 465px;
+      left: 0;
+      background-color: #f2f2f2;
+    }
   }
 
   .example__wrapper {
@@ -221,6 +233,7 @@
     width: 114px;
     top: 65px;
     left: 25px;
+    background-color: #ffffff;
   }
 
   .example__image-cat-little {
@@ -269,6 +282,10 @@
 @media (min-width: @desktop-width) {
   .example {
     width: 100%;
+
+    &::before {
+      top: 140px;
+    }
   }
 
   .example__title {
@@ -309,6 +326,7 @@
     top: 65px;
     left: 12px;
     width: 142px;
+    background-color: #f2f2f2;
   }
 
   .example__price {
