@@ -1,6 +1,6 @@
 .example {
   background-color: #eaeaea;
-  width: 320px;
+  width: 100%;
   margin: auto;
 }
 
@@ -9,6 +9,7 @@
   flex-direction: column;
   padding-bottom: 40px;
   position: relative;
+  width: 320px;
 }
 
 .example__title {
@@ -178,6 +179,10 @@
   }
 
   .example {
+    width: 100%;
+  }
+
+  .example__wrapper {
     width: 708px;
   }
 
@@ -263,7 +268,7 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    width: 1220px;
+    width: 100%;
   }
 
   .example__title {
