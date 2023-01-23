@@ -3,8 +3,11 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  margin-left: 20px;
+  margin: 0;
+  margin-left: 13px;
+  margin-top: 28px;
   width: 139px;
+  padding-bottom: 25px;
 }
 
 .contacts__address {
@@ -59,12 +62,27 @@
   .contacts__cooperation {
     font-size: 20px;
     line-height: 26px;
+    margin-left: -94px;
+    width: 160px;
   }
 
   .contacts__address {
     font-size: 16px;
     line-height: 20px;
     width: 160px;
+    margin-right: -83px;
+    margin-top: -28px;
+    position: relative;
+  }
+
+  .contacts__address span:first-child {
+    margin-left: 66px;
+  }
+
+  .contacts__address span:last-child {
+    position: absolute;
+    top: 60px;
+    left: 29px;
   }
 
   .contacts__map {
@@ -86,7 +104,7 @@
   }
 
   .contacts__map {
-    width: 100%;
+    width: 1423px;
     height: 400px;
     background: url("../img/index/map-desktop.png") no-repeat center;
     background-size: cover;
@@ -95,5 +113,23 @@
       background-image: url("../img/index/map-desctop@2x.png");
       background-size: 100% auto;
     }
+  }
+
+  .contacts__cooperation {
+    margin-left: 36px;
+  }
+
+  .contacts__address {
+    margin-right: 32px;
+  }
+
+  .contacts__address span:first-child {
+    margin-left: 0;
+  }
+
+  .contacts__address span:last-child {
+    position: absolute;
+    top: 58px;
+    left: 2px;
   }
 }

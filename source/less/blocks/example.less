@@ -34,9 +34,10 @@
   border-radius: 3px;
 }
 
-.example__quantity span {
+.example__quantity-text {
   display: block;
-  margin-top: 15px;
+  margin-top: 14px;
+  margin-left: 2px;
 }
 
 .example__price {
@@ -44,6 +45,7 @@
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .example__quantity-description {
@@ -54,7 +56,7 @@
   position: absolute;
   width: 84px;
   background-color: #eaeaea;
-  top: 50px;
+  top: 47px;
   left: 20px;
 }
 
@@ -67,8 +69,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  gap: 0 32px;
-  margin-bottom: 34px;
+  gap: 0 28px;
+  margin-bottom: 25px;
 }
 
 .example__data {
@@ -83,8 +85,8 @@
 
 .example__image-cat-little {
   position: absolute;
-  top: 375px;
-  left: 144px;
+  top: 363px;
+  left: 140px;
   width: 140px;
   height: 256px;
   background-image: url("../img/index/cat-slider-little-mobile.png");
@@ -124,8 +126,8 @@
 .example__slider {
   height: 256px;
   width: 40px;
-  top: 375px;
-  left: 122px;
+  top: 364px;
+  left: 121px;
   position: absolute;
   z-index: 2;
 
@@ -172,26 +174,35 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .example__title {
-    padding-top: 43px;
+    padding-top: 0;
     margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
   }
 
   .example {
     width: 100%;
     background-color: #ffffff;
     position: relative;
+    margin-bottom: 580px;
 
     &::before {
       position: absolute;
       content: "";
       width: 100%;
-      height: 462px;
-      top: 465px;
+      height: 500px;
+      top: 575px;
       left: 0;
       background-color: #f2f2f2;
     }
+  }
+
+  .example__block {
+    gap: 0 40px;
   }
 
   .example__wrapper {
@@ -210,14 +221,22 @@
 
   .example__description {
     margin-bottom: 54px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .example__price {
     text-align: right;
-    margin-left: 90px;
+    margin-left: 165px;
+    margin-top: 6px;
     font-size: 20px;
     line-height: 30px;
     width: 174px;
+  }
+
+  .example__text {
+    margin-bottom: 40px;
   }
 
   .example__quantity {
@@ -230,15 +249,15 @@
   .example__quantity-description {
     font-size: 14px;
     line-height: 14px;
-    width: 114px;
-    top: 65px;
-    left: 25px;
+    width: 131px;
+    top: 63px;
+    left: 17px;
     background-color: #ffffff;
   }
 
   .example__image-cat-little {
-    top: 375px;
-    left: 284px;
+    top: 425px;
+    left: 355px;
     width: 280px;
     height: 512px;
     background-image: url("../img/index/cat-slider-little.png");
@@ -250,8 +269,11 @@
   }
 
   .example__image-cat-big {
+    position: absolute;
     width: 280px;
     height: 512px;
+    top: 425px;
+    left: 75px;
     background-image: url("../img/index/cat-slider-big.png");
 
     @media (min-resolution: 2dppx) {
@@ -274,14 +296,15 @@
   .example__slider {
     height: 512px;
     width: 40px;
-    top: 375px;
-    left: 262px;
+    top: 425px;
+    left: 335px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
     width: 100%;
+    margin-bottom: -27px;
 
     &::before {
       top: 140px;
@@ -292,6 +315,7 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 146px;
+    margin-top: 8px;
   }
 
   .example__wrapper {
@@ -308,10 +332,13 @@
     width: 560px;
     height: 512px;
     margin-left: 175px;
+    top: 9px;
+    left: 485px;
   }
 
   .example__description {
-    width: 436px;
+    width: 432px;
+    margin-bottom: 69px;
   }
 
   .example__quantity {
@@ -332,23 +359,28 @@
   .example__price {
     font-size: 20px;
     line-height: 20px;
-    width: 310px;
-    margin-left: 0;
+    width: 346px;
+    margin-left: -19px;
+    margin-top: 27px;
   }
 
   .example__price span {
-    margin-left: 63px;
+    margin-left: 60px;
   }
 
   .example__image-cat-little {
     top: 10px;
-    left: 719px;
+    left: 765px;
   }
 
   .example__slider {
     height: 512px;
     width: 40px;
-    top: 10px;
-    left: 873px;
+    top: 9px;
+    left: 920px;
+  }
+
+  .example__slider-svg {
+    top: 129px;
   }
 }
