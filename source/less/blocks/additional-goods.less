@@ -10,10 +10,13 @@
 }
 
 .additional-goods__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 24px;
   line-height: 24px;
   position: relative;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 33px;
 
   &::after {
     content: "";
@@ -31,16 +34,17 @@
     width: 53px;
     height: 2px;
     background-color: #68b738;
-    right: -10px;
-    top: 15px;
+    right: -20px;
+    top: 16px;
   }
 }
 
 .additional-goods__card-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  margin-bottom: 3px;
 }
 
 .additional-goods__gift {
@@ -51,18 +55,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 54px;
+  margin-top: 38px;
   position: relative;
   margin-bottom: 35px;
 
   &::after {
     content: "";
     position: absolute;
-    width: 320px;
+    width: 280px;
     height: 1px;
     background-color: #d9d9d9;
-    top: -25px;
-    right: -20px;
+    top: -36px;
+    right: 0;
   }
 
   @media (min-resolution: 2dppx) {
@@ -75,29 +79,38 @@
   color: #ffffff;
   width: 161px;
   text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.additional-goods__gift-image {
+  margin-top: 30px;
+  margin-bottom: 26px;
 }
 
 .additional-goods__item {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  margin-bottom: 31px;
+  height: 130px;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    width: 320px;
+    width: 280px;
     height: 1px;
     background-color: #d9d9d9;
-    top: 0;
-    right: -20px;
+    top: 3px;
+    right: -2px;
   }
 }
 
 .additional-goods__card-item {
   display: flex;
   justify-content: space-between;
+  line-height: 14px;
 }
 
 .additional-goods__list {
@@ -111,11 +124,12 @@
   background-color: #68b738;
   color: #ffffff;
   border: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 0;
 
   &:hover {
     background-color: #5eaa2f;
@@ -128,11 +142,16 @@
 
 
 @media (min-width: @tablet-width) {
+  .additional-goods {
+    width: 708px;
+  }
+
   .additional-goods__title {
     width: 708px;
     font-size: 36px;
     line-height: 36px;
-    margin-left: 37px;
+    margin-left: 74px;
+    margin-bottom: 79px;
 
     &::after {
       content: "";
@@ -140,8 +159,8 @@
       width: 53px;
       height: 2px;
       background-color: #68b738;
-      left: -100px;
-      top: 20px;
+      left: -90px;
+      top: 21px;
     }
 
     &::before {
@@ -150,14 +169,15 @@
       width: 328px;
       height: 2px;
       background-color: #68b738;
-      right: -10px;
-      top: 20px;
+      right: 6px;
+      top: 21px;
     }
   }
 
   .additional-goods__wrapper {
     width: 708px;
     align-items: center;
+    margin-top: 55px;
   }
 
   .additional-goods__text {
@@ -165,6 +185,8 @@
     justify-content: space-between;
     width: 632px;
     margin: 0 auto;
+    margin-top: 6px;
+    margin-bottom: 7px;
   }
 
   .additional-goods__gift {
@@ -173,6 +195,7 @@
     height: 200px;
     flex-direction: row;
     margin-bottom: 76px;
+    margin-top: 68px;
 
     &::after {
       background-color: #d9d9d900;
@@ -186,13 +209,17 @@
 
   .additional-goods__item {
     width: 708px;
-    height: 139px;
+    height: 138px;
     border: 1px solid #cdcdcd;
     margin-bottom: 0;
 
     &::after {
       background-color: #d9d9d900;
     }
+  }
+
+  .additional-goods__item:not(:first-child) {
+    border-top: none;
   }
 
   .additional-goods__card-title {
@@ -210,12 +237,36 @@
     width: 632px;
     margin: 0 auto;
   }
+
+  .additional-goods__card-list {
+    margin-top: 23px;
+    margin-left: 10px;
+  }
+
+  .additional-goods__card-price {
+    margin-left: 50px;
+    margin-right: 3px;
+    margin-top: -2px;
+  }
+
+  .additional-goods__item:nth-child(2) .additional-goods__card-price {
+    margin-right: 4px;
+    margin-left: 57px;
+  }
+
+  .additional-goods__gift-text {
+    margin-right: 43px;
+    margin-left: 267px;
+    text-align: left;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .additional-goods__wrapper {
     width: 1220px;
     align-items: center;
+    margin-top: 65px;
+    margin-bottom: 10px;
   }
 
   .additional-goods__block {
@@ -244,24 +295,46 @@
       width: 895px;
       height: 1px;
       background-color: #cdcdcd;
-      top: -5px;
+      top: -10px;
+      left: 3px;
     }
+  }
+
+  .additional-goods__card-list {
+    margin-top: 13px;
+    margin-right: 14px;
+  }
+
+  .additional-goods__item:nth-child(2) .additional-goods__card-price {
+    margin-right: 11px;
   }
 
   .additional-goods__title {
     width: 1220px;
     margin-left: 0;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 
     &::before {
       width: 957px;
-      right: -140px;
+      right: -110px;
+      top: 22px;
     }
+
+    &::after {
+      left: -92px;
+      top: 22px;
+    }
+  }
+
+  .additional-goods__card-title {
+    margin-top: 10px;
+    margin-left: 2px;
   }
 
   .additional-goods__order {
     width: 244px;
-    margin: auto;
+    margin-top: 6px;
+    margin-left: -16px;
   }
 
   .additional-goods__card-item {
@@ -271,5 +344,10 @@
 
   .additional-goods__text {
     margin-right: 40px;
+  }
+
+  .additional-goods__gift-text {
+    text-align: center;
+    margin-left: 40px;
   }
 }

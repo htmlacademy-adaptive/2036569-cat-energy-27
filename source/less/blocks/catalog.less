@@ -1,11 +1,11 @@
 .catalog__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 27px;
   width: 260px;
-  margin-bottom: 70px;
+  margin-bottom: 54px;
   position: relative;
 
   &::after {
@@ -14,7 +14,7 @@
     width: 320px;
     height: 1px;
     background-color: #d9d9d9;
-    top: -25px;
+    top: -28px;
     right: -40px;
   }
 }
@@ -28,11 +28,10 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-top: 20px;
   padding: 0;
   list-style-type: none;
   width: 280px;
-  margin-bottom: 40px;
+  height: 209px;
   position: relative;
 
   &::before {
@@ -41,13 +40,13 @@
     width: 320px;
     height: 1px;
     background-color: #d9d9d9;
-    top: -20px;
+    top: -14px;
     right: -20px;
   }
 }
 
 .catalog__title-card {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
@@ -61,21 +60,18 @@
   font-size: 12px;
 }
 
-.main-container {
-  width: 280px;
-  margin: auto;
-}
-
 .catalog__block {
   display: flex;
 }
 
 .catalog__even {
   margin-left: 28px;
+  margin-top: 7px;
 }
 
 .catalog__odd {
   margin-left: 36px;
+  margin-top: 7px;
 }
 
 .catalog__image-odd {
@@ -83,27 +79,54 @@
 }
 
 .catalog__image-even {
-  margin-left: 26px;
+  margin-left: 27px;
 }
 
-.catalog__image {
+.catalog__500-chicken {
   margin-top: 20px;
+}
+
+.catalog__1000-chicken {
+  margin-top: 16px;
+}
+
+.catalog__500-fish {
+  margin-top: 31px;
+}
+
+.catalog__1000-fish {
+  margin-top: 15px;
+}
+
+.catalog__500-buckwheat {
+  margin-top: 36px;
+}
+
+.catalog__1000-buckwheat {
+  margin-top: 17px;
+}
+
+.catalog__500-rice {
+  margin-top: 31px;
+  margin-left: 34px;
 }
 
 .catalog__info-item {
   display: flex;
   justify-content: space-between;
   width: 140px;
+  margin-bottom: -2px;
 }
 
 .catalog__order {
-  margin-top: 22px;
+  position: absolute;
+  top: 130px;
   width: 280px;
   height: 40px;
   background-color: #68b738;
   color: #ffffff;
   border: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -119,7 +142,8 @@
 }
 
 .catalog__button-show {
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 8px;
   width: 40px;
   height: 40px;
   background-color: #ffffff;
@@ -154,8 +178,13 @@
 }
 
 .catalog__show-product {
+  text-transform: uppercase;
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   margin: 0;
-  margin-top: 23px;
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 
@@ -169,7 +198,7 @@
   height: 40px;
   background-color: #f2f2f2;
   border: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -195,15 +224,12 @@
     font-size: 60px;
     line-height: 60px;
     width: 440px;
-    margin-bottom: 150px;
+    margin-bottom: 163px;
+    margin-top: 61px;
 
     &::after {
       background-color: #d9d9d900;
     }
-  }
-
-  .main-container {
-    width: 708px;
   }
 
   .main-nav__link-catalog {
@@ -224,7 +250,7 @@
   .catalog__list {
     display: grid;
     grid-template-columns: 324px 324px;
-    gap: 95px 60px;
+    gap: 141px 60px;
   }
 
   .catalog__image {
@@ -241,7 +267,7 @@
   .catalog__image-even {
     margin-left: 0;
     position: absolute;
-    top: -75px;
+    top: -70px;
   }
 
   .catalog__odd {
@@ -292,8 +318,14 @@
   }
 
   .catalog__order {
-    width: 246px;
+    width: 248px;
     margin: auto;
+    top: 350px;
+    left: 38px;
+  }
+
+  .catalog__info-list {
+    margin-top: 21px;
   }
 
   .catalog__button-show {
@@ -334,8 +366,9 @@
 
   .catalog__show-all {
     position: absolute;
-    left: 23px;
-    bottom: 35px;
+    width: 249px;
+    left: 36px;
+    bottom: 40px;
   }
 
   .catalog__block-show-all {
@@ -345,12 +378,36 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .catalog__title {
+    margin-top: 72px;
+  }
+
   .catalog__item {
     width: 245px;
   }
 
+  .catalog__image-odd {
+    top: -51px;
+  }
+
+  .catalog__image-even {
+    top: -79px;
+    left: 40px;
+  }
+
   .catalog__text {
     width: 168px;
+    margin-top: 166px;
+  }
+
+  .catalog__title-card {
+    line-height: 21px;
+    margin-left: 15px;
   }
 
   .catalog__info-item {
@@ -364,21 +421,18 @@
 
   .catalog__order {
     width: 168px;
+    top: 353px;
   }
 
   .catalog__show-all {
     width: 169px;
-    left: 40px;
-  }
-
-  .main-container {
-    width: 1220px;
+    left: 36px;
   }
 
   .catalog__list {
     display: grid;
     grid-template-columns: 245px 245px 245px 245px;
-    gap: 95px 80px;
+    gap: 143px 80px;
   }
 
   .contacts__info-catalog {
