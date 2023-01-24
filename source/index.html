@@ -12,7 +12,7 @@
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="body">
+<body class="page_body">
 
   <svg style="display: none">
     <symbol id="logo-image-vk" width="27" height="17" viewBox="0 0 27 17" xmlns="http://www.w3.org/2000/svg">
@@ -133,22 +133,22 @@
           <img class="main-header__logo-text" src="img/logo-text.png" alt="Логотип название" width="101" height="18">
         </a>
       </div>
-      <nav class="main-header__nav main-header__nav--opened main-header__nav--nojs">
-        <button class="main-header__nav-toggle"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-header__nav-wrapper">
-          <ul class="main-header__nav-list">
-            <li class="main-header__nav-item main-header__nav-item-index--active">
-              <a class="main-header__nav-link" href="index.html">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item site-list__item--active">
+              <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-header__nav-item">
-              <a class="main-header__nav-link" href="catalog.html">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="main-header__nav-item">
-              <a class="main-header__nav-link" href="form.html">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
                 Подбор программы
               </a>
             </li>
@@ -160,9 +160,9 @@
 
   <main>
     <h1 class="visually-hidden container">Правильное питание для котов</h1>
+    <div class="promo__background"></div>
 
     <section class="promo">
-      <div class="promo__background"></div>
       <div class="promo__wrapper container">
         <div class="promo__background-mobile"></div>
         <div class="promo__text">
@@ -312,7 +312,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="main-footer container">
       <section class="contacts">
         <div class="contacts__wrapper">
@@ -366,7 +366,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="../source/js/script.js"></script>
 </body>
 
 </html>
