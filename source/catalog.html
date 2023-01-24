@@ -13,7 +13,7 @@
   <title>Каталог</title>
 </head>
 
-<body class="page_body">
+<body class="body">
 
   <svg style="display: none">
     <symbol id="logo-image-vk" width="27" height="17" viewBox="0 0 27 17" xmlns="http://www.w3.org/2000/svg">
@@ -78,22 +78,22 @@
           <img class="main-header__logo-text" src="img/logo-text.png" alt="Логотип название" width="101" height="18">
         </a>
       </div>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="main-nav__item site-list__item">
-              <a class="main-nav__link main-nav__link-catalog" href="index.html">
+      <nav class="main-header__nav main-header__nav--opened main-header__nav--nojs">
+        <button class="main-header__nav-toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-header__nav-wrapper">
+          <ul class="main-header__nav-list">
+            <li class="main-header__nav-item">
+              <a class="main-header__nav-link main-header__nav-link-catalog" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link main-nav__link-catalog" href="catalog.html">
+            <li class="main-header__nav-item">
+              <a class="main-header__nav-link main-header__nav-link-catalog" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link-catalog" href="form.html">
+            <li class="main-header__nav-item main-header__nav-item--active">
+              <a class="main-header__nav-link main-header__nav-link-catalog" href="form.html">
                 Подбор программы
               </a>
             </li>
@@ -475,7 +475,7 @@
     </div>
   </footer>
 
-  <script src="../source/js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
