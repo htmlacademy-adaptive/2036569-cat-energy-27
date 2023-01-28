@@ -8,6 +8,7 @@
 .program-selection__title {
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   margin-top: 27px;
   margin-bottom: 37px;
 }
@@ -48,6 +49,13 @@
 }
 
 .program-selection__user-value {
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #444444;
   border: 1px solid #e7e7e7;
   padding: 0 20px;
   height: 43px;
@@ -58,6 +66,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  color: #444444;
 }
 
 .program-selection__user-label {
@@ -92,20 +101,34 @@
   font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 24px;
   line-height: 26px;
+  font-weight: 400;
   margin-bottom: 35px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    width: 98px;
+    width: 100%;
     height: 2px;
     background-color: #68b738;
-    right: -19px;
+    right: -202px;
     top: 17px;
   }
 }
 
+.error {
+  border: 1px solid #ff8282 !important;
+}
+
+.error + .program-selection__contact-icon {
+  stroke: #ff8282;
+}
+
+.program-selection__form-group-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .program-selection__contact {
   position: relative;
@@ -159,16 +182,17 @@
   font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 24px;
   line-height: 26px;
+  font-weight: 400;
   margin-bottom: 37px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    width: 156px;
+    width: 100%;
     height: 2px;
     background-color: #68b738;
-    right: -19px;
+    right: -142px;
     top: 16px;
   }
 }
@@ -189,6 +213,7 @@
   font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 24px;
   line-height: 26px;
+  font-weight: 400;
   position: relative;
   margin: 0;
   margin-bottom: 41px;
@@ -196,10 +221,10 @@
   &::before {
     content: "";
     position: absolute;
-    width: 134px;
+    width: 100%;
     height: 2px;
     background-color: #68b738;
-    right: -19px;
+    right: -165px;
     top: 16px;
   }
 }
@@ -268,6 +293,15 @@
   border: 1px solid #cdcdcd;
 }
 
+.program-selection__program-type-value:focus + .program-selection__program-mark {
+  border: 2px solid #222222;
+}
+
+.program-selection__additionally-value:focus + .program-selection__program-mark {
+  border: 2px solid #222222;
+}
+
+
 .program-selection__program-type-label .program-selection__program-type-value[type="checkbox"]:checked + .program-selection__program-mark::before {
   content: "";
   position: absolute;
@@ -314,6 +348,20 @@
   }
 }
 
+.program-selection__program-type-value[disabled] + span {
+  opacity: 0.3;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@-moz-document url-prefix() {
+  .program-selection__program-type-value {
+    top: 13px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .program-selection {
     width: 630px;
@@ -323,7 +371,7 @@
   .program-selection__title {
     font-size: 60px;
     line-height: 60px;
-    margin-top: 61px;
+    margin-top: 45px;
     margin-bottom: 55px;
   }
 
@@ -389,11 +437,11 @@
 
   .program-selection__program-type {
     margin: 0;
-    margin-top: 9px;
+    margin-top: 4px;
   }
 
   .program-selection__program-type:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 19px;
   }
 
   .program-selection__additionally-block {
@@ -429,18 +477,17 @@
     margin-bottom: 79px;
 
     &::before {
-      width: 145px;
       top: 23px;
-      right: -65px;
+      right: -555px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 30px;
+      width: 100%;
       height: 2px;
       background-color: #68b738;
-      left: -69px;
+      left: -670px;
       top: 23px;
     }
   }
@@ -458,18 +505,17 @@
     margin-bottom: 76px;
 
     &::before {
-      width: 478px;
       top: 22px;
-      right: -6px;
+      right: -220px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 30px;
+      width: 100%;
       height: 2px;
       background-color: #68b738;
-      left: -69px;
+      left: -673px;
       top: 22px;
     }
   }
@@ -492,18 +538,17 @@
     margin-bottom: 36px;
 
     &::before {
-      width: 450px;
       top: 22px;
-      right: -73px;
+      right: -254px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 30px;
+      width: 100%;
       height: 2px;
       background-color: #68b738;
-      left: -70px;
+      left: -668px;
       top: 23px;
     }
   }
@@ -570,6 +615,12 @@
       background-image: url("../img/form/icon-tablet@2x.png");
     }
   }
+
+  @-moz-document url-prefix() {
+    .program-selection__program-type-value {
+      top: 14px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -584,7 +635,7 @@
   }
 
   .program-selection__title {
-    margin-top: 71px;
+    margin-top: 52px;
   }
 
   .program-selection__form-group {
@@ -601,14 +652,13 @@
     margin-bottom: 79px;
 
     &::before {
-      width: 777px;
       top: 20px;
-      right: -108px;
+      right: -552px;
     }
 
     &::after {
-      width: 70px;
-      left: -110px;
+      width: 100%;
+      left: -1259px;
       top: 21px;
     }
   }
@@ -624,14 +674,13 @@
 
   .program-selection__comment-title {
     &::before {
-      width: 1107px;
-      top: 20px;
-      right: -110px;
+      top: 22px;
+      right: -222px;
     }
 
     &::after {
-      width: 70px;
-      left: -111px;
+      width: 100%;
+      left: -1260px;
       top: 22px;
     }
   }
@@ -640,15 +689,14 @@
     margin-bottom: 39px;
 
     &::before {
-      width: 1078px;
       top: 24px;
-      right: -110px;
+      right: -253px;
     }
 
     &::after {
-      width: 71px;
-      left: -111px;
-      top: 22px;
+      width: 100%;
+      left: -1260px;
+      top: 23px;
     }
   }
 
@@ -702,6 +750,7 @@
 
   .program-selection__contact-block {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -711,5 +760,11 @@
 
   .program-selection__required-fields {
     margin-left: 84px;
+  }
+
+  @-moz-document url-prefix() {
+    .program-selection__program-type-value {
+      top: 15px;
+    }
   }
 }
