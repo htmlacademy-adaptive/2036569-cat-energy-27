@@ -63,28 +63,25 @@
 .main-footer__html-logo {
   fill: #666666;
   margin-right: 8px;
+}
 
-  &:hover {
-    fill: #68b738;
-  }
+.main-footer__html-link:hover .main-footer__html-logo {
+  fill: #68b738;
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.main-footer__html-link:hover .main-footer__html-text {
+  opacity: 0.6;
+}
+
+.main-footer__html-link:active .main-footer__html-logo,
+.main-footer__html-link:active .main-footer__html-text {
+  opacity: 0.3;
 }
 
 .main-footer__html-text {
   margin-top: 10px;
   margin-left: -6px;
   letter-spacing: 1px;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .main-footer__item {

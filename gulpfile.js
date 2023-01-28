@@ -72,7 +72,8 @@ const svg = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
-    'source/*icon'
+    'source/*icon',
+    'source/manifest.webmanifest'
 ], {
   base: 'source'
 })
@@ -147,4 +148,3 @@ export default gulp.series (
     server,
     watcher
 ));
-
