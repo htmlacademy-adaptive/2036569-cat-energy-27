@@ -47,7 +47,7 @@
         stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
-    <symbol id="logo-cat" width="143" height="27" viewBox="0 0 143 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="logo-cat" viewBox="0 0 143 27" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1.78783 24.4381C0.522508 22.6066 -0.105608 20.4106 2.82917e-05 18.1878V8.92382C-0.1532 6.67709 0.435585 4.44218 1.67609 2.56183C2.9052 1.11085 4.80474 0.441162 7.59818 0.441162C10.3916 0.441162 12.1794 1.11085 13.2968 2.3386C14.5099 3.89364 15.1066 5.84078 14.9728 7.80768V10.04H9.49771V7.47284C9.54193 6.71359 9.42778 5.95344 9.1625 5.24056C9.0207 4.95281 8.79596 4.71401 8.51719 4.55488C8.23841 4.39576 7.91835 4.32359 7.59818 4.34765C6.81601 4.34765 6.25733 4.57088 6.03385 5.12894C5.78108 5.92199 5.66766 6.75276 5.69864 7.58445V19.5271C5.63963 20.334 5.79375 21.1423 6.14559 21.871C6.36906 22.4291 6.92775 22.6523 7.70991 22.6523C8.49208 22.6523 8.93903 22.4291 9.1625 21.871C9.41655 21.1167 9.53016 20.3223 9.49771 19.5271V16.8484H14.9728V19.0807C15.0865 21.0797 14.4932 23.055 13.2968 24.6614C12.1794 26.0007 10.2799 26.6704 7.59818 26.6704C4.91648 26.5588 2.9052 25.8891 1.78783 24.4381Z"
         fill="#111111" />
@@ -86,12 +86,12 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="51">
             <img class="main-header__logo-image" src="img/logo-mobile.svg" alt="Логотип" width="33" height="37">
           </picture>
-          <img class="main-header__logo-text" src="img/logo-text.webp" alt="Логотип название" width="101" height="18">
+          <img class="main-header__logo-text" src="img/logo-text.png" alt="Логотип название" width="101" height="18">
         </a>
       </div>
       <nav class="main-header__nav main-header__nav--opened main-header__nav--nojs">
         <button class="main-header__nav-toggle"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-header__nav-wrapper main-header__nav--nojs">
+        <div class="main-header__nav-wrapper main-header__nav-wrapper--nojs">
           <ul class="main-header__nav-list">
             <li class="main-header__nav-item">
               <a class="main-header__nav-link main-header__nav-link-catalog" href="index.html">
@@ -140,7 +140,7 @@
           <fieldset class="program-selection__form-group program-selection__form-group-checkbox">
             <p class="program-selection__program-type">
               <label class="program-selection__program-type-label">
-                <input class="program-selection__program-type-value visually-hidden" type="checkbox" checked>
+                <input class="program-selection__program-type-value visually-hidden" type="radio" name="program" value="weightloss" checked>
                 <span class="program-selection__program-type-value program-selection__program-mark">
                 </span>
                 <span class="program-selection__program-type-title">Похудение</span>
@@ -148,14 +148,14 @@
             </p>
             <p class="program-selection__program-type">
               <label class="program-selection__program-type-label">
-                <input class="program-selection__program-type-value visually-hidden" type="checkbox">
+                <input class="program-selection__program-type-value visually-hidden" value="weightgain" name="program"  type="radio" checked>
                 <span class="program-selection__program-type-value program-selection__program-mark"></span>
                 <span class="program-selection__program-type-title">Набор массы</span>
               </label>
             </p>
             <p class="program-selection__program-type">
               <label class="program-selection__program-type-label">
-                <input class="program-selection__program-type-value visually-hidden" type="checkbox">
+                <input class="program-selection__program-type-value visually-hidden" name="program"  value="recommendation" type="radio">
                 <span class="program-selection__program-type-value program-selection__program-mark"></span>
                 <span class="program-selection__program-type-title">Не знаю (нужен ваш совет)</span>
               </label>
@@ -168,7 +168,7 @@
           <div class="program-selection__contact-block">
             <p class="program-selection__contact program-selection__contact-email">
               <label class="program-selection__contact-label" for="user-email">E-mail:*</label>
-              <input class="program-selection__contact-value program-selection__contact-value-email" type="email"
+              <input class="program-selection__contact-value program-selection__contact-value-email error" type="email"
                 id="user-email" placeholder="kuklachev@gmail.com">
               <svg class="program-selection__contact-icon" width="17" height="13">
                 <use href="#icon-mail"></use>
@@ -176,8 +176,8 @@
             </p>
             <p class="program-selection__contact program-selection__contact-phone">
               <label class="program-selection__contact-label" for="user-number">Телефон:*</label>
-              <input class="program-selection__contact-value program-selection__contact-value-phone" type="number"
-                id="user-number" placeholder="8 (960) 900-60-90">
+              <input class="program-selection__contact-value program-selection__contact-value-phone" type="tel"
+                id="user-number" pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="8 (960) 900-60-90">
               <svg class="program-selection__contact-icon" width="15" height="16">
                 <use href="#icon-phone"></use>
               </svg>
@@ -187,7 +187,8 @@
 
         <fieldset class="program-selection__form-group">
           <h3 class="program-selection__comment-title">Комментарий</h3>
-          <textarea class="program-selection__comment-value" name="info-cat" cols="30" rows="10"
+          <label class="visually-hidden" for="info-cat">Расскажите обо всех повадках кота</label>
+          <textarea class="program-selection__comment-value" id="info-cat" name="info-cat" cols="30" rows="10"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
@@ -236,10 +237,10 @@
 
   </main>
 
-  <footer>
-    <div class="main-footer container">
+  <footer class="footer">
+    <div class="main-footer">
       <section class="contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper container">
           <h2 class="visually-hidden"> Контакты компании</h2>
           <div class="contacts__info">
             <p class="contacts__cooperation">приглашаем <br> к сотрудничеству дилеров!</p>
@@ -248,33 +249,33 @@
               <span>Санкт-Петербург</span>
             </p>
           </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603628793782!2d30.318562737085166!3d59.93871911108934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1674887312135!5m2!1sru!2sru" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
-      <div class="main-footer__item">
+      <iframe class="main-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603628793782!2d30.318562737085166!3d59.93871911108934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1674887312135!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="main-footer__item container">
         <a class="main-footer__logo" href="#">
-          <svg class="main-footer__logo-image" width="143" height="27">
+          <svg class="main-footer__logo-image main-footer__logo-image-cat" aria-label="Логотип компании" width="143" height="27">
             <use href="#logo-cat"></use>
           </svg>
         </a>
         <ul class="main-footer__list">
           <li class="main-footer__items">
-            <a class="main-footer__social" href="#" aria="Ссылка на вконтакте">
-              <svg class="main-footer__logo-image" width="27" height="17">
+            <a class="main-footer__social" href="#">
+              <svg class="main-footer__logo-image" aria-label="Логотип Вконтакте" width="27" height="17">
                 <use href="#logo-image-vk"></use>
               </svg>
             </a>
           </li>
           <li class="main-footer__items">
-            <a class="main-footer__social" href="#" aria="Ссылка на ютуб">
-              <svg class="main-footer__logo-image" width="24" height="19">
+            <a class="main-footer__social" href="#">
+              <svg class="main-footer__logo-image" aria-label="Логотип ютуб" width="24" height="19">
                 <use href="#logo-image-youtube"></use>
               </svg>
             </a>
           </li>
           <li class="main-footer__items">
-            <a class="main-footer__social" href="#" aria="Ссылка на телеграм">
-              <svg class="main-footer__logo-image" width="20" height="18" viewBox="0 0 20 18">
+            <a class="main-footer__social" href="#">
+              <svg class="main-footer__logo-image" aria-label="Логотип телеграм" width="20" height="18" viewBox="0 0 20 18">
                 <use href="#logo-image-telegram"></use>
               </svg>
             </a>
